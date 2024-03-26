@@ -138,3 +138,7 @@ short_list.depend(3)
 
 #It's a bad idea to handle this exception in your programs.
 #You should produce code that is free of syntax errors, instead of masking the faults you’ve caused.
+
+# Bug vs. debug
+The basic measure a developer can use against bugs is – a debugger, while the process during which bugs are removed from the code is called debugging.
+According to an old joke, debugging is a complicated mystery game in which you are simultaneously the murderer, the detective, and the victim.
