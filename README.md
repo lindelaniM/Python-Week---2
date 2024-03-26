@@ -85,55 +85,56 @@ def factorial(n):
 
 print(factorial(4)) # 4 * 3 * 2 * 1 = 24
 
+# Some useful exceptions
 
 try:
     value = int(input('Enter a natural number: '))
     print('The reciprocal of', value, 'is', 1/value)        
-# except ValueError:
-#     print('I do not know what to do.')    
-# except ZeroDivisionError:
-#     print('Division by zero is not allowed in our Universe.')    
-except: ## takes in and handle all kinds of exception: Default
+ except ValueError:
+     print('I do not know what to do.')    
+ except ZeroDivisionError:
+     print('Division by zero is not allowed in our Universe.')    
+except: ##takes in and handle all kinds of exception: Default
     print('Something strange has happened here... Sorry!')
 
-# Some useful exceptions
-# Let’s discuss in more detail some useful (or rather, the most common) exceptions you may experience.
 
-# ## ZeroDivisionError
-# This appears when you try to force Python to perform any operation which provokes division in which the divider is zero, or is indistinguishable from zero.
-# Note that there is more than one Python operator which may cause this exception to raise.
-# Can you guess them all?
+#Let’s discuss in more detail some useful (or rather, the most common) exceptions you may experience.
 
-# : /, //, and %.
+# ZeroDivisionError
+#This appears when you try to force Python to perform any operation which provokes division in which the divider is zero, or is indistinguishable from zero.
+#Note that there is more than one Python operator which may cause this exception to raise.
+#Can you guess them all?
 
-# ## ValueError
+#: /, //, and %.
 
-# Expect this exception when you're dealing with values which may be inappropriately used in some context.
-# In general, this exception is raised when a function (like int() or float()) receives an argument of a proper type, but its value is unacceptable.
+# ValueError
 
-# ## TypeError
+#Expect this exception when you're dealing with values which may be inappropriately used in some context.
+#In general, this exception is raised when a function (like int() or float()) receives an argument of a proper type, but its value is unacceptable.
+
+# TypeError
     
-# This exception shows up when you try to apply a data whose type cannot be accepted in the current context.
-# Look at the example:
+#This exception shows up when you try to apply a data whose type cannot be accepted in the current context.
+#Look at the example:
 
 short_list = [1]
 one_value = short_list[0.5]
 
-# AttributeError
-# This exception arrives – among other occasions –
-# when you try to activate a method which doesn't exist in an item you're dealing with.
-# For example:
+#AttributeError
+#This exception arrives – among other occasions –
+#when you try to activate a method which doesn't exist in an item you're dealing with.
+#For example:
 
 short_list = [1]
 short_list.append(2)
 short_list.depend(3)
 
-## SyntaxError
+# SyntaxError
 
-# This exception is raised when the control reaches a line of code which violates Python's grammar.
-# It may sound strange, but some errors of this kind cannot be identified without first running the code.
-# This kind of behavior is typical of interpreted languages – the interpreter always works in a hurry and has no time to scan the whole source code.
-# It is content with checking the code which is currently being run. An example of such a category of issues will be presented very soon.
+#This exception is raised when the control reaches a line of code which violates Python's grammar.
+#It may sound strange, but some errors of this kind cannot be identified without first running the code.
+#This kind of behavior is typical of interpreted languages – the interpreter always works in a hurry and has no time to scan the whole source code.
+#It is content with checking the code which is currently being run. An example of such a category of issues will be presented very soon.
 
-# It's a bad idea to handle this exception in your programs.
-# You should produce code that is free of syntax errors, instead of masking the faults you’ve caused.
+#It's a bad idea to handle this exception in your programs.
+#You should produce code that is free of syntax errors, instead of masking the faults you’ve caused.
