@@ -85,3 +85,34 @@ def factorial(n):
 
 print(factorial(4)) # 4 * 3 * 2 * 1 = 24
 
+
+try:
+    value = int(input('Enter a natural number: '))
+    print('The reciprocal of', value, 'is', 1/value)        
+# except ValueError:
+#     print('I do not know what to do.')    
+# except ZeroDivisionError:
+#     print('Division by zero is not allowed in our Universe.')    
+except: ## takes in and handle all kinds of exception: Default
+    print('Something strange has happened here... Sorry!')
+
+# Some useful exceptions
+# Let’s discuss in more detail some useful (or rather, the most common) exceptions you may experience.
+
+# ## ZeroDivisionError
+# This appears when you try to force Python to perform any operation which provokes division in which the divider is zero, or is indistinguishable from zero.
+# Note that there is more than one Python operator which may cause this exception to raise.
+# Can you guess them all?
+
+# : /, //, and %.
+
+# ## ValueError
+
+# Expect this exception when you're dealing with values which may be inappropriately used in some context.
+# In general, this exception is raised when a function (like int() or float()) receives an argument of a proper type, but its value is unacceptable.
+
+# ## TypeError
+    
+# This exception shows up when you try to apply a data whose type cannot be accepted in the current context.
+# Look at the example:
+
